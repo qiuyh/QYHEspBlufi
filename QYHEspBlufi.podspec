@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'QYHEspBlufi'
-  s.version          = '0.0.2'
+  s.version          = '0.0.3'
   s.summary          = 'EspBlufi'
 
 # This description is used to generate tags and improve search results.
@@ -34,6 +34,19 @@ Pod::Spec.new do |s|
     classes.source_files = 'QYHEspBlufi/Classes/**/*.{h,m}'
   end
 
+  s.requires_arc = true
+  s.static_framework = true
+
+  s.ios.vendored_libraries = "QYHEspBlufi/Classes/Openssl/Lib/libcrypto.a","QYHEspBlufi/Classes/Openssl/Lib/libssl.a"
+  search_paths = [
+  #Podfile使用指定路径链接
+  'QYHEspBlufi/Classes/Openssl/include'
+  ]
+  
+  s.pod_target_xcconfig = {
+#    'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
+    'HEADER_SEARCH_PATHS' => search_paths.join(' '),
+  }
   
   # s.resource_bundles = {
   #   'QYHEspBlufi' => ['QYHEspBlufi/Assets/*.png']
@@ -46,10 +59,10 @@ Pod::Spec.new do |s|
 #  s.libraries = "c++","c"
 #  s.requires_arc = true
 #  s.static_framework = true
-   s.dependency 'QYHOpenssl', '~> 0.0.7'
-   
-   s.xcconfig = {
-     'VALID_ARCHS' =>  'armv7 x86_64 arm64',
-   }
+#  s.dependency 'QYHOpenssl', '~> 0.0.7'
+#   
+#  s.xcconfig = {
+#    'VALID_ARCHS' =>  'armv7 x86_64 arm64',
+#  }
    
 end
