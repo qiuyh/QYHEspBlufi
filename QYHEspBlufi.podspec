@@ -19,11 +19,11 @@ Pod::Spec.new do |s|
 
   s.description      = "EspBlufi 封装"
 
-  s.homepage         = 'https://github.com/QiuM1Pro/QYHEspBlufi'
+  s.homepage         = 'https://github.com/qiuyh/QYHEspBlufi'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'QiuM1Pro' => '2021M1Pro14@FengHuai' }
-  s.source           = { :git => 'https://github.com/QiuM1Pro/QYHEspBlufi.git', :tag => s.version.to_s }
+  s.author           = { 'QiuM1Pro' => '1039724903@qq.com' }
+  s.source           = { :git => 'https://github.com/qiuyh/QYHEspBlufi.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'

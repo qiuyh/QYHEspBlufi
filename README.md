@@ -19,7 +19,7 @@ pod 'QYHEspBlufi'
 
 ## Author
 
-1039724903@qq.com, yonghuai.qiu@saj-electric.com
+1039724903@qq.com
 
 ## License
 
