@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'QYHEspBlufi'
-  s.version          = '0.0.1'
-  s.summary          = 'EspBlufi 封装'
+  s.version          = '0.0.2'
+  s.summary          = 'EspBlufi'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -47,5 +47,9 @@ Pod::Spec.new do |s|
 #  s.requires_arc = true
 #  s.static_framework = true
    s.dependency 'QYHOpenssl', '~> 0.0.7'
+   
+   s.xcconfig = {
+     'VALID_ARCHS' =>  'armv7 x86_64 arm64',
+   }
    
 end
