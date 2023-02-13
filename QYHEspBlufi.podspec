@@ -42,7 +42,7 @@ Pod::Spec.new do |s|
     end
     
     classes.subspec 'Openssl' do |ss|
-      ss.source_files = 'QYHEspBlufi/Classes/Openssl/*.{h,m}'
+#      ss.source_files = 'QYHEspBlufi/Classes/Openssl/*.{h,m}'
       
       ss.subspec 'include' do |sss|
         sss.source_files = 'QYHEspBlufi/Classes/Openssl/include/*.{h,m}'
