@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'QYHEspBlufi'
-  s.version          = '0.0.4'
+  s.version          = '0.0.5'
   s.summary          = 'EspBlufi'
 
 # This description is used to generate tags and improve search results.
@@ -31,7 +31,37 @@ Pod::Spec.new do |s|
 #  s.source_files = 'QYHEspBlufi/Classes/**/*'
   
   s.subspec 'Classes' do |classes|
-    classes.source_files = 'QYHEspBlufi/Classes/**/*.{h,m}'
+#    classes.source_files = 'QYHEspBlufi/Classes/**/*.{h,m}'
+    
+    classes.subspec 'Center' do |ss|
+      ss.source_files = 'QYHEspBlufi/Classes/Center/**/*.{h,m}'
+    end
+    
+    classes.subspec 'Data' do |ss|
+      ss.source_files = 'QYHEspBlufi/Classes/Data/**/*.{h,m}'
+    end
+    
+    classes.subspec 'Openssl' do |ss|
+      ss.source_files = 'QYHEspBlufi/Classes/Openssl/**/*.{h,m}'
+      
+      ss.subspec 'include' do |sss|
+        sss.source_files = 'QYHEspBlufi/Classes/Openssl/include/*.{h,m}'
+        
+        sss.subspec 'include' do |ssss|
+          ssss.source_files = 'QYHEspBlufi/Classes/Openssl/include/openssl/*.{h,m}'
+        end
+        
+      end
+      
+    end
+    
+    classes.subspec 'Response' do |ss|
+      ss.source_files = 'QYHEspBlufi/Classes/Response/**/*.{h,m}'
+    end
+    
+    classes.subspec 'Security' do |ss|
+      ss.source_files = 'QYHEspBlufi/Classes/Security/**/*.{h,m}'
+    end
   end
 
   s.requires_arc = true
@@ -62,7 +92,7 @@ Pod::Spec.new do |s|
 #  s.dependency 'QYHOpenssl', '~> 0.0.7'
 #   
   s.xcconfig = {
-    'VALID_ARCHS' =>  'arm64 armv7s x86_64',
+    'VALID_ARCHS' => 'arm64 armv7s x86_64',
   }
    
 end
