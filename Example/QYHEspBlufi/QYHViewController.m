@@ -7,6 +7,7 @@
 //
 
 #import "QYHViewController.h"
+#import "BlufiClient.h"
 
 @interface QYHViewController ()
 
