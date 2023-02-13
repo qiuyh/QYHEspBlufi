@@ -32,36 +32,37 @@ Pod::Spec.new do |s|
   
   s.subspec 'Classes' do |classes|
 #    classes.source_files = 'QYHEspBlufi/Classes/**/*.{h,m}'
-    
-    classes.subspec 'Center' do |ss|
-      ss.source_files = 'QYHEspBlufi/Classes/Center/*.{h,m}'
-    end
-    
-    classes.subspec 'Data' do |ss|
-      ss.source_files = 'QYHEspBlufi/Classes/Data/*.{h,m}'
-    end
+    classes.name = 'Classes'
     
     classes.subspec 'Openssl' do |ss|
-#      ss.source_files = 'QYHEspBlufi/Classes/Openssl/*.{h,m}'
-      
+      ss.name = 'Openssl'
       ss.subspec 'include' do |sss|
-        sss.source_files = 'QYHEspBlufi/Classes/Openssl/include/*.{h,m}'
-        
+        sss.source_files = 'QYHEspBlufi/Classes/Openssl/include/**/*'
         sss.subspec 'openssl' do |ssss|
-          ssss.source_files = 'QYHEspBlufi/Classes/Openssl/include/openssl/*.{h,m}'
+          ssss.source_files = 'QYHEspBlufi/Classes/Openssl/include/openssl/**/*'
         end
-        
       end
-      
-    end
-    
-    classes.subspec 'Response' do |ss|
-      ss.source_files = 'QYHEspBlufi/Classes/Response/*.{h,m}'
     end
     
     classes.subspec 'Security' do |ss|
-      ss.source_files = 'QYHEspBlufi/Classes/Security/*.{h,m}'
+      ss.name = 'Security'
+      ss.source_files = 'QYHEspBlufi/Classes/Security/**/*'
+      ss.dependency 'QYHEspBlufi/Classes/Openssl'
     end
+    
+    classes.subspec 'Center' do |ss|
+      ss.name = 'Center'
+      ss.source_files = 'QYHEspBlufi/Classes/Center/**/*'
+      ss.dependency 'QYHEspBlufi/Classes/Security'
+
+    end
+    
+    classes.subspec 'Data' do |ss|
+      ss.name = 'Data'
+      ss.source_files = 'QYHEspBlufi/Classes/Data/**/*'
+      ss.dependency 'QYHEspBlufi/Classes/Center'
+    end
+
   end
 
   s.requires_arc = true
