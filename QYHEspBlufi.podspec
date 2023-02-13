@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'QYHEspBlufi'
-  s.version          = '0.0.3'
+  s.version          = '0.0.4'
   s.summary          = 'EspBlufi'
 
 # This description is used to generate tags and improve search results.
@@ -61,8 +61,8 @@ Pod::Spec.new do |s|
 #  s.static_framework = true
 #  s.dependency 'QYHOpenssl', '~> 0.0.7'
 #   
-#  s.xcconfig = {
-#    'VALID_ARCHS' =>  'armv7 x86_64 arm64',
-#  }
+  s.xcconfig = {
+    'VALID_ARCHS' =>  'arm64 armv7s x86_64',
+  }
    
 end
