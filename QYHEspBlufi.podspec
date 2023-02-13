@@ -56,12 +56,12 @@ Pod::Spec.new do |s|
       ss.dependency 'QYHEspBlufi/Classes/Security'
 
     end
-    
-    classes.subspec 'Data' do |ss|
-      ss.name = 'Data'
-      ss.source_files = 'QYHEspBlufi/Classes/Data/**/*'
-      ss.dependency 'QYHEspBlufi/Classes/Center'
-    end
+#
+#    classes.subspec 'Data' do |ss|
+#      ss.name = 'Data'
+#      ss.source_files = 'QYHEspBlufi/Classes/Data/**/*'
+#      ss.dependency 'QYHEspBlufi/Classes/Center'
+#    end
 
   end
 
