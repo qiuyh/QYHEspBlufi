@@ -34,20 +34,20 @@ Pod::Spec.new do |s|
 #    classes.source_files = 'QYHEspBlufi/Classes/**/*.{h,m}'
     
     classes.subspec 'Center' do |ss|
-      ss.source_files = 'QYHEspBlufi/Classes/Center/**/*.{h,m}'
+      ss.source_files = 'QYHEspBlufi/Classes/Center/*.{h,m}'
     end
     
     classes.subspec 'Data' do |ss|
-      ss.source_files = 'QYHEspBlufi/Classes/Data/**/*.{h,m}'
+      ss.source_files = 'QYHEspBlufi/Classes/Data/*.{h,m}'
     end
     
     classes.subspec 'Openssl' do |ss|
-      ss.source_files = 'QYHEspBlufi/Classes/Openssl/**/*.{h,m}'
+      ss.source_files = 'QYHEspBlufi/Classes/Openssl/*.{h,m}'
       
       ss.subspec 'include' do |sss|
         sss.source_files = 'QYHEspBlufi/Classes/Openssl/include/*.{h,m}'
         
-        sss.subspec 'include' do |ssss|
+        sss.subspec 'openssl' do |ssss|
           ssss.source_files = 'QYHEspBlufi/Classes/Openssl/include/openssl/*.{h,m}'
         end
         
@@ -56,11 +56,11 @@ Pod::Spec.new do |s|
     end
     
     classes.subspec 'Response' do |ss|
-      ss.source_files = 'QYHEspBlufi/Classes/Response/**/*.{h,m}'
+      ss.source_files = 'QYHEspBlufi/Classes/Response/*.{h,m}'
     end
     
     classes.subspec 'Security' do |ss|
-      ss.source_files = 'QYHEspBlufi/Classes/Security/**/*.{h,m}'
+      ss.source_files = 'QYHEspBlufi/Classes/Security/*.{h,m}'
     end
   end
 
