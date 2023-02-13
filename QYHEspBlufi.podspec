@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'QYHEspBlufi'
-  s.version          = '0.0.5'
+  s.version          = '0.0.6'
   s.summary          = 'EspBlufi'
 
 # This description is used to generate tags and improve search results.
@@ -37,8 +37,10 @@ Pod::Spec.new do |s|
     classes.subspec 'Openssl' do |ss|
       ss.name = 'Openssl'
       ss.subspec 'include' do |sss|
-        sss.source_files = 'QYHEspBlufi/Classes/Openssl/include/**/*'
+        sss.name = 'include'
+        sss.source_files = 'QYHEspBlufi/Classes/Openssl/include/*.h'
         sss.subspec 'openssl' do |ssss|
+          ssss.name = 'openssl'
           ssss.source_files = 'QYHEspBlufi/Classes/Openssl/include/openssl/**/*'
         end
       end
