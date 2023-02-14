@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'QYHEspBlufi'
-  s.version          = '0.0.9'
+  s.version          = '0.1.0'
   s.summary          = 'EspBlufi'
 
 # This description is used to generate tags and improve search results.
@@ -31,33 +31,33 @@ Pod::Spec.new do |s|
 #  s.source_files = 'QYHEspBlufi/Classes/**/*'
   
   s.subspec 'Classes' do |classes|
-#    classes.source_files = 'QYHEspBlufi/Classes/**/*.{h,m}'
-    classes.name = 'Classes'
-    
-    classes.subspec 'Openssl' do |ss|
-      ss.name = 'Openssl'
-      ss.subspec 'include' do |sss|
-        sss.name = 'include'
-        sss.source_files = 'QYHEspBlufi/Classes/Openssl/include/*.h'
-        sss.subspec 'openssl' do |ssss|
-          ssss.name = 'openssl'
-          ssss.source_files = 'QYHEspBlufi/Classes/Openssl/include/openssl/**/*'
-        end
-      end
-    end
-    
-    classes.subspec 'Security' do |ss|
-      ss.name = 'Security'
-      ss.source_files = 'QYHEspBlufi/Classes/Security/**/*'
-      ss.dependency 'QYHEspBlufi/Classes/Openssl'
-    end
-    
-    classes.subspec 'Center' do |ss|
-      ss.name = 'Center'
-      ss.source_files = 'QYHEspBlufi/Classes/Center/**/*'
-      ss.dependency 'QYHEspBlufi/Classes/Security'
-
-    end
+    classes.source_files = 'QYHEspBlufi/Classes/**/*.{h,m}'
+#    classes.name = 'Classes'
+#
+#    classes.subspec 'Openssl' do |ss|
+#      ss.name = 'Openssl'
+#      ss.subspec 'include' do |sss|
+#        sss.name = 'include'
+#        sss.source_files = 'QYHEspBlufi/Classes/Openssl/include/*.h'
+#        sss.subspec 'openssl' do |ssss|
+#          ssss.name = 'openssl'
+#          ssss.source_files = 'QYHEspBlufi/Classes/Openssl/include/openssl/**/*'
+#        end
+#      end
+#    end
+#
+#    classes.subspec 'Security' do |ss|
+#      ss.name = 'Security'
+#      ss.source_files = 'QYHEspBlufi/Classes/Security/**/*'
+#      ss.dependency 'QYHEspBlufi/Classes/Openssl'
+#    end
+#
+#    classes.subspec 'Center' do |ss|
+#      ss.name = 'Center'
+#      ss.source_files = 'QYHEspBlufi/Classes/Center/**/*'
+#      ss.dependency 'QYHEspBlufi/Classes/Security'
+#
+#    end
 #
 #    classes.subspec 'Data' do |ss|
 #      ss.name = 'Data'
@@ -69,7 +69,6 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
   s.static_framework = true
-  s.requires_arc = true
   
   s.ios.vendored_libraries = "QYHEspBlufi/Classes/Openssl/Lib/libcrypto.a","QYHEspBlufi/Classes/Openssl/Lib/libssl.a"
   search_paths = [
