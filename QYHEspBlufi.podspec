@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'QYHEspBlufi'
-  s.version          = '0.0.6'
+  s.version          = '0.0.9'
   s.summary          = 'EspBlufi'
 
 # This description is used to generate tags and improve search results.
@@ -69,7 +69,8 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
   s.static_framework = true
-
+  s.requires_arc = true
+  
   s.ios.vendored_libraries = "QYHEspBlufi/Classes/Openssl/Lib/libcrypto.a","QYHEspBlufi/Classes/Openssl/Lib/libssl.a"
   search_paths = [
   #Podfile使用指定路径链接
